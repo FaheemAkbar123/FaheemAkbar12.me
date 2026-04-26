@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faheem Akbar | 3D Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Faheem Akbar, a passionate Computer Science student and software developer.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">FA<span>HEEM</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content" data-reveal>
+                <h2 class="subtitle">Welcome to my universe</h2>
+                <h1 class="title">FAHEEM <span class="accent">AKBAR</span></h1>
+                <p class="tagline">COMPUTER SCIENCE STUDENT & SOFTWARE DEVELOPER</p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn primary-btn">Explore Work</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-subtitle">Discovery</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div class="about-photo-wrapper" data-reveal>
+                    <img src="profile.jpg" alt="Faheem Akbar" class="profile-photo">
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text" data-reveal="left">
+                        <p>I am a dedicated Computer Science undergraduate student at <strong>Sukkur IBA
+                                University</strong>, passionate about software and web development. With a <strong>CGPA
+                                of 3.10</strong>, I have been recognized for my academic achievements.</p>
+                        <p>I thrive in challenging environments, eager to learn and grow. My experience includes
+                            teaching and active participation in organizations, where I enhance my programming abilities
+                            and contribute to team projects.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">3.10</span>
+                                <span class="stat-label">CGPA</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">3+</span>
+                                <span class="stat-label">Languages</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">SIBA</span>
+                                <span class="stat-label">Student</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-extra" data-reveal="right">
+                        <div class="glass-card">
+                            <h3>Languages</h3>
+                            <ul class="lang-list">
+                                <li><strong>ENGLISH</strong> - Native</li>
+                                <li><strong>URDU</strong> - Native</li>
+                                <li><strong>SINDHI</strong> - Native</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section alt-bg">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-subtitle">Journey</span>
+                    <h2 class="section-title">Experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item" data-reveal="bottom">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">01/2023 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Student Executive Member</h3>
+                            <h4 class="company">Sukkur IBA University</h4>
+                            <p>A prestigious institution for higher education in Sukkur. Contributing as an active
+                                member in various initiatives.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal="bottom">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Member</div>
+                        <div class="timeline-content">
+                            <h3>Executive Member</h3>
+                            <h4 class="company">CS Society Sukkur IBA University</h4>
+                            <p>Actively involved in organizing technical events and fostering a coding culture within
+                                the university.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal="bottom">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Participant</div>
+                        <div class="timeline-content">
+                            <h3>SIBAFEST Competition</h3>
+                            <h4 class="company">Speed Programming</h4>
+                            <p>Participated in high-stakes speed programming competitions, focusing on algorithms and
+                                efficient coding techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-subtitle">Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-card" data-reveal="bottom">
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
+                        <h3>Undergraduate (BS CS)</h3>
+                        <p class="school">Sukkur Institute of Business Administration University</p>
+                        <p class="date">01/2023 - 06/2027</p>
+                        <p class="loc">Sukkur, Sindh, Pakistan</p>
+                    </div>
+                    <div class="edu-card" data-reveal="bottom">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>F.Sc. (Pre-Engineering)</h3>
+                        <p class="school">Board of Intermediate and Secondary Education Larkana</p>
+                        <p class="date">05/2020 - 06/2022</p>
+                        <p class="loc">Larkana, Sindh, Pakistan</p>
+                    </div>
+                    <div class="edu-card" data-reveal="bottom">
+                        <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                        <h3>Certificate in Computer</h3>
+                        <p class="school">Descon Computer Centre Kashmore</p>
+                        <p class="date">08/2021 - 12/2021</p>
+                        <p class="loc">Kashmore, Sindh, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section alt-bg">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-subtitle">Expertise</span>
+                    <h2 class="section-title">Skills & Strengths</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category" data-reveal="left">
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>C/C++</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>SQL</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-reveal="right">
+                        <h3>Domain Knowledge</h3>
+                        <div class="skill-tags">
+                            <span>OOP</span>
+                            <span>DSA</span>
+                            <span>Software Development</span>
+                            <span>Application Development (Java Swing)</span>
+                            <span>Problem-Solving</span>
+                            <span>Critical Thinking</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-reveal="bottom">
+                        <h3>Soft Skills</h3>
+                        <div class="skill-tags">
+                            <span>Teamwork</span>
+                            <span>Communication</span>
+                            <span>Time Management</span>
+                            <span>Adaptability</span>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact</h2>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info" data-reveal="left">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(+92) 3001324336</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>faheemakbar.bscssef23khp@iba-suk.edu.pk</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://wa.me/923001324336?text=hello%20faheem%20akbar%20i%20wants%20some%20sevics%20are%20you%20ready%20to%20service%20us%20%3F"
+                                target="_blank" class="icon-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/923001324336?text=hello%20faheem%20akbar%20i%20wants%20some%20sevics%20are%20you%20ready%20to%20service%20us%20%3F"
+                                        target="_blank" class="contact-link">(+92) 3001324336</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/iamfaheemakbar</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Karachi, Sindh, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" data-reveal="right">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Faheem Akbar. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

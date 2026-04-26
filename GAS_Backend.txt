@@ -1,0 +1,75 @@
+/**
+ * GOOGLE APPS SCRIPT BACKEND FOR PORTFOLIO
+ * 
+ * Instructions:
+ * 1. Create a Google Sheet.
+ * 2. Add tabs: "Profile", "Experience", "Education", "Skills", "Contacts", and "Messages".
+ * 3. In "Messages" tab, add headers in the first row: Timestamp, Name, Email, Message.
+ * 4. Go to Extensions > Apps Script.
+ * 5. Paste this code and save.
+ * 6. Deploy > New Deployment > Web App.
+ * 7. Set "Execute as" to "Me" and "Who has access" to "Anyone".
+ * 8. Copy the Web App URL and use it in your main.js.
+ */
+
+// Handle GET requests (Fetching portfolio data)
+function doGet(e) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const data = {
+    profile: getSheetData(ss.getSheetByName("Profile")),
+    experience: getSheetData(ss.getSheetByName("Experience")),
+    education: getSheetData(ss.getSheetByName("Education")),
+    skills: getSheetData(ss.getSheetByName("Skills")),
+    contacts: getSheetData(ss.getSheetByName("Contacts"))
+  };
+  
+  return ContentService.createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// Handle POST requests (Saving contact form messages)
+function doPost(e) {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let sheet = ss.getSheetByName("Messages");
+    
+    // Create "Messages" sheet if it doesn't exist
+    if (!sheet) {
+      sheet = ss.insertSheet("Messages");
+      sheet.appendRow(["Timestamp", "Name", "Email", "Message"]);
+    }
+    
+    const params = e.parameter;
+    const name = params.name || "N/A";
+    const email = params.email || "N/A";
+    const message = params.message || "N/A";
+    const timestamp = new Date();
+    
+    sheet.appendRow([timestamp, name, email, message]);
+    
+    return ContentService.createTextOutput(JSON.stringify({ status: "success", message: "Message saved successfully" }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function getSheetData(sheet) {
+  if (!sheet) return [];
+  const rows = sheet.getDataRange().getValues();
+  if (rows.length < 2) return []; // Only headers or empty
+  
+  const headers = rows[0];
+  const items = [];
+  
+  for (let i = 1; i < rows.length; i++) {
+    const item = {};
+    for (let j = 0; j < headers.length; j++) {
+      item[headers[j].toString().toLowerCase().replace(/\s+/g, '_')] = rows[i][j];
+    }
+    items.push(item);
+  }
+  return items;
+}

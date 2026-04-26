@@ -1,0 +1,41 @@
+FABULOUS 3D PORTFOLIO - DEPLOYMENT GUIDE
+========================================
+
+Congratulations on your new 3D portfolio! Here is how to deploy it to the web so everyone can see it.
+
+OPTION 1: GITHUB PAGES (Recommended - Free & Easy)
+--------------------------------------------------
+1. Create a new repository on GitHub (e.g., "portfolio").
+2. Upload all these files (`index.html`, `style.css`, `main.js`, images) to the repository.
+3. Go to Repository Settings > Pages.
+4. Under "Source", select "Deploy from a branch" and choose "main" (or "master").
+5. Click Save. GitHub will give you a live URL (e.g., https://yourname.github.io/portfolio).
+
+OPTION 2: NETLIFY / VERCEL (Drag & Drop)
+----------------------------------------
+1. Go to https://app.netlify.com/drop OR https://vercel.com
+2. Simply drag and drop the folder containing these files onto the page.
+3. It will deploy instantly and give you a unique URL.
+4. You can change the domain name in the site settings.
+
+OPTION 3: RUNNING LOCALLY
+-------------------------
+To run this on your own computer, you cannot just double-click index.html (the 3D chart won't load due to security).
+1. Open a terminal in this folder.
+2. Run: python -m http.server 8000
+3. Open your browser to: http://localhost:8000
+
+BACKEND SETUP (Contact Form & Data)
+-----------------------------------
+This portfolio is set up to work with Google Sheets for storing contact form submissions or dynamic data.
+1. Open the file `GAS_Backend.txt` included in this folder.
+2. Follow the instructions inside to copy the code into a Google Apps Script project.
+3. Deploy the script as a Web App.
+4. If you want to fetch data (like Experience/Skills) dynamically, update the URL in `main.js`.
+
+Files Included:
+- index.html (Main structure)
+- style.css (Design & Animations)
+- main.js (3D Logic & Interactive features)
+- profile.jpg / unnamed.png (Your photos)
+- GAS_Backend.txt (Backend code)
